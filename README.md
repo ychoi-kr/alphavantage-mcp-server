@@ -10,6 +10,23 @@ A Model Context Protocol (MCP) server that provides access to Alpha Vantage fina
 - **News & Sentiment**: Latest financial news with sentiment analysis
 - **Error Handling**: Robust API error handling and rate limit management
 
+### Configuration
+
+1. Get your free API key from [Alpha Vantage](https://www.alphavantage.co/support/#api-key)
+2. Create a `.env` file in the project directory:
+   ```bash
+   cp .env.example .env
+   ```
+3. Add your API key to the `.env` file:
+   ```
+   ALPHAVANTAGE_API_KEY=your_api_key_here
+   ```
+
+> [!NOTE]
+> **Priority**: Environment variables set in `claude_desktop_config.json` take precedence over `.env` files. To use `.env`, remove the key from your Claude Desktop config.
+
+### Usage with Claude Desktop
+
 ## 📋 Prerequisites
 
 1. **Alpha Vantage API Key**: Get your free API key from [Alpha Vantage](https://www.alphavantage.co/support/#api-key)

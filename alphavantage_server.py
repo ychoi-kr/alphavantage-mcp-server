@@ -5,12 +5,14 @@ import os
 import sys
 from typing import Any, Sequence
 import httpx
+from dotenv import load_dotenv
 from mcp.server.models import InitializationOptions
 import mcp.types as types
 from mcp.server import NotificationOptions, Server
 import mcp.server.stdio
 
 # Get API key from environment
+load_dotenv()
 API_KEY = os.getenv("ALPHAVANTAGE_API_KEY")
 if not API_KEY:
     raise ValueError("ALPHAVANTAGE_API_KEY environment variable is required")
